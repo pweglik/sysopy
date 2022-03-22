@@ -1,0 +1,19 @@
+create_array 10
+wc_files test_data/small
+create_and_add_block
+delete_block 0
+wc_files test_data/medium
+create_and_add_block
+delete_block 0
+wc_files test_data/big
+create_and_add_block
+delete_block 0
+wc_files test_data/large
+create_and_add_block
+delete_block 0
+wc_files test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small 
+create_and_add_block
+delete_block 0
+wc_files test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small test_data/small 
+create_and_add_block
+delete_block 0

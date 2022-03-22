@@ -1,0 +1,213 @@
+Próby
+3 kolejne wierze oznaczają czas zliczania (wc_files),
+czas tworzenia bloku (create_and_add_block) i czas 
+usuwania bloku (delete_block)
+
+Schematy czasów takie same jak w results2a.txt i results3a.txt
+
+static O1
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.070, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.200, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.400, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.760, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.480, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.910, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+static O2
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.200, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.420, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.810, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.500, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 1.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+static O3
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.090, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.210, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.410, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.880, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.490, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.980, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+shared O1
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.220, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.540, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.820, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.470, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 1.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+shared O2
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.200, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.420, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.790, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.460, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.930, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+shared O3
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.210, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.420, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.820, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.470, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.940, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+dynamic O1
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.190, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.390, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.810, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.460, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.920, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+dynamic O2
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.080, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.200, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.420, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.850, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.510, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 1.010, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+dynamic O3
+
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.090, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.190, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.400, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.760, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.530, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.960, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+### WNIOSKI ###
+
+Takie same jak w raport2.txt i w results3a.txt.
+Dodatkowo można zaobserwować, że wyższa flaga optymalizacji
+zmniejsza czas wykonania skryptów dla jedneogo dużego pliku ale
+obniża dla wielu mniejszych plików. Wzór ten nie zawsze jest zachowany.
+Czasami czasy zachowują się nieliniowo - może to wynikać z losowo generowanych
+plików wejściowych

@@ -1,0 +1,49 @@
+Tworzenie tabeli:
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+Próby
+3 kolejne wierze oznaczają czas zliczania (wc_files),
+czas tworzenia bloku (create_and_add_block) i czas 
+usuwania bloku (delete_block)
+
+1 plik około 20MB
+Real Time: 0.100, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 50MB
+Real Time: 0.190, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 100MB
+Real Time: 0.370, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 200MB
+Real Time: 0.750, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+5 plików około 20MB
+Real Time: 0.460, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+10 plików około 20MB
+Real Time: 0.900, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+
+### WNIOSKI ###
+
+Największy czas wykonania niesie za sobą zliczanie (wc_files)
+gdyż wymaga ono otworzenia dużego pliku i czytania jego 
+zawartości. Wyjaśni to także dlaczego czas rzeczywisty
+jest większy od czasu użytkownika + systemowego 
+(sytuacja raczej nieczęsta, zdarza się m.in. własnie podczas 
+dużego obciążenia I/O). Oprócz tego można zaobserwować, że
+szybsze jest ładowanie jednego dużego pliku (200MB) niż kilku 
+plików o tej samej łącznej pojemności (10 x 20MB)

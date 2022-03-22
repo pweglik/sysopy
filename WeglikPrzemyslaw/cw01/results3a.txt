@@ -1,0 +1,117 @@
+Próby
+3 kolejne wierze oznaczają czas zliczania (wc_files),
+czas tworzenia bloku (create_and_add_block) i czas 
+usuwania bloku (delete_block)
+
+### STATIC LIBRARY ###
+Tworzenie tabeli
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 20MB
+Real Time: 0.110, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 50MB
+Real Time: 0.200, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 100MB
+Real Time: 0.440, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 200MB
+Real Time: 0.800, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+5 plików około 20MB
+Real Time: 0.440, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+10 plików około 20MB
+Real Time: 0.900, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+### SHARED LIBRARY ###
+
+Tworzenie tabeli
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 20MB
+Real Time: 0.070, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 50MB
+Real Time: 0.190, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 100MB
+Real Time: 0.380, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 200MB
+Real Time: 0.760, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+5 plików około 20MB
+Real Time: 0.470, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+10 plików około 20MB
+Real Time: 0.940, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+### DYNAMIC LIBRARY ###
+
+Tworzenie tabeli
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 20MB
+Real Time: 0.110, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 50MB
+Real Time: 0.190, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 100MB
+Real Time: 0.390, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+1 plik około 200MB
+Real Time: 0.790, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+5 plików około 20MB
+Real Time: 0.450, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+10 plików około 20MB
+Real Time: 0.920, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+Real Time: 0.000, User Time 0.000, System Time 0.000
+
+
+### WNIOSKI ###
+
+Takie same jak w raport2.txt. 
+Dodatkowo widać, że bibliotek statyczna sprawdza się lepiej podczas ładowania wielu
+plików, tymczasem w przypadku jednego dużego pliku szybsza była
+biblioteka współdzielona. Średnio najsbłabiej wypadła biblioteka 
+ładowana dynamicznie
