@@ -55,4 +55,5 @@ dkms.conf
 .vscode
 bin
 test_data
+data
 temp
