@@ -2,10 +2,10 @@ CFLAGS=-Wall -Wpedantic -Wextra
 
 all: bin/main_stat bin/main_nftw
 
-test: bin/main_stat bin/main_nftw data/benchmark_input valgrind_verify
+test: bin/main_stat bin/main_nftw testdir valgrind_verify
 	
 
-valgrind_verify: ./bin/main_stat ./bin/main_nftw data/input
+valgrind_verify: ./bin/main_stat ./bin/main_nftw testdir
 	valgrind ./bin/main_stat testdir
 	valgrind ./bin/main_nftw testdir
 
