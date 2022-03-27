@@ -2,7 +2,7 @@ CFLAGS=-Wall -Wpedantic -Wextra
 
 all: bin/main_lib bin/main_sys
 
-test: bin/main_lib bin/main_sys  data/benchmark_input
+test: bin/main_lib bin/main_sys data/benchmark_input valgrind_verify benchmark
 	
 
 valgrind_verify:
