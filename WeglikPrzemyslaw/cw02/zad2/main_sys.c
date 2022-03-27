@@ -9,33 +9,32 @@
 #include <sys/times.h>
 
 
-int LINE_MAX_LENGTH = 10000;
 int MAX_FILENAME = 100;
 
-void process_arguments(int argc, char *argv[], char ** input_filename, char ** output_filename)
+void process_arguments(int argc, char *argv[], char ** character_to_count, char ** input_filename)
 {
     if(argc == 3)
     {
         printf("Correct arguments! Copying file's content...\n");
-        *input_filename = calloc(sizeof(char), strlen(argv[1]));
-        strcpy(*input_filename, argv[1]);
+        *character_to_count = calloc(sizeof(char), strlen(argv[1]));
+        strcpy(*character_to_count, argv[1]);
 
-        *output_filename = calloc(sizeof(char), strlen(argv[2]));
-        strcpy(*output_filename, argv[2]);
+        *input_filename = calloc(sizeof(char), strlen(argv[2]));
+        strcpy(*input_filename, argv[2]);
     }
     else
     {
+        *character_to_count = calloc(sizeof(char), MAX_FILENAME);
         *input_filename = calloc(sizeof(char), MAX_FILENAME);
-        *output_filename = calloc(sizeof(char), MAX_FILENAME);
         printf("You haven't passed right arguments!\n");
+        printf("Character to count: ");
+        scanf("%s", *character_to_count);
         printf("Input file: ");
         scanf("%s", *input_filename);
-        printf("Output file: ");
-        scanf("%s", *output_filename);
     }
 }
 
-void load_files(int * input_file, int * output_file, char ** input_filename, char ** output_filename)
+void load_file(int * input_file, char ** input_filename)
 {
     *input_file = open(*input_filename, O_RDONLY);
     if(*input_file == -1)
@@ -43,60 +42,47 @@ void load_files(int * input_file, int * output_file, char ** input_filename, cha
         printf("Couldn't open input file: %s", *input_filename);
         exit(1);
     }
-
-    *output_file = open(*output_filename, O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR);
-    if(*output_file == -1)
-    {   
-        printf("Couldn't open output file: %s", *output_filename);
-        exit(1);
-    }
 }
 
-bool is_line_empty(char * line)
+struct count_results
 {
-    size_t i = 0;
-    while(line[i] != '\0')
-    {
-        if(isspace(line[i]) == 0)
-        {
-            return false;
-        }
-        i++;
-    }
-    return true;
-}
+    int character_count;
+    int line_count;
+};
 
-void filter_empty_lines(int * input_file, int * output_file)
+struct count_results count_chars_and_lines(int * input_file, char * character_to_count)
 {
-    char * line = calloc(sizeof(char), LINE_MAX_LENGTH);
+    struct count_results result;
+    result.character_count = 0;
+    result.line_count = 0;
+
     char character[1];
-    size_t len;
 
-    strcpy(line, "");
-    len = 0;
+    // flag to mark if we have already encountered a character
+    bool char_in_line = false;
 
     while(read(*input_file, character, 1) == 1) 
     {
         if(strcmp(character, "\n") == 0)
         {
-            if(is_line_empty(line) == false)
+            if(char_in_line == true)
             {
-                strcat(line, "\n");
-                len += 1;
-                write(*output_file, line, len);
+                result.line_count++;
             }
             // cleaning line and len
-            strcpy(line, "");
-            len = 0;
+            char_in_line = false;
         }
         else
         {
-            strcat(line, character);
-            len += 1;
+            if(strcmp(character, character_to_count) == 0)
+            {
+                result.character_count++;
+                char_in_line = true;
+            }
         }
     }
 
-    free(line);
+    return result;
 }
 
 // functions used for timing
@@ -123,28 +109,27 @@ void end_clock()
 
 int main(int argc, char *argv[])
 {
+    char * character_to_count;
     char * input_filename;
-    char * output_filename;
     
-    process_arguments(argc, argv, &input_filename, &output_filename);
+    process_arguments(argc, argv, &character_to_count, &input_filename);
 
     // start timing
     start_clock();
 
     int input_file;
-    int output_file;
 
-    load_files(&input_file, &output_file, &input_filename, &output_filename);
+    load_file(&input_file, &input_filename);
 
-    filter_empty_lines(&input_file, &output_file);
+    struct count_results result = count_chars_and_lines(&input_file, character_to_count);
+    printf("Character count: %d, Line count: %d \n", result.character_count, result.line_count);
 
     end_clock();
 
     close(input_file);
-    close(output_file);
 
     free(input_filename);
-    free(output_filename);
+    free(character_to_count);
 
     return 0;
 

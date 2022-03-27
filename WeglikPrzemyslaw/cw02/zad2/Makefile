@@ -6,12 +6,12 @@ test: bin/main_lib bin/main_sys data/benchmark_input valgrind_verify benchmark
 	
 
 valgrind_verify: ./bin/main_lib ./bin/main_sys data/input
-	valgrind ./bin/main_lib data/input data/output 
-	valgrind ./bin/main_sys data/input data/output 
+	valgrind ./bin/main_lib c data/input
+	valgrind ./bin/main_sys c data/input
 
 benchmark: bin/main_lib bin/main_sys data/benchmark_input
-	./bin/main_lib data/benchmark_input data/benchmark_output 
-	./bin/main_sys data/benchmark_input data/benchmark_output 
+	./bin/main_lib a data/benchmark_input
+	./bin/main_sys a data/benchmark_input
 
 bin/main_lib: main_lib.c
 	gcc $(CFLAGS) main_lib.c -o bin/main_lib
