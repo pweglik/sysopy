@@ -3,7 +3,6 @@ CFLAGS=-Wall -Wpedantic -Wextra -g
 all: bin/main
 
 test: bin/main valgrind_verify benchmark
-	
 
 valgrind_verify: bin/main
 	valgrind ./bin/main 1000

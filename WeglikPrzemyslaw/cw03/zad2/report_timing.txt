@@ -1,0 +1,18 @@
+h = 0.001 
+n = 100
+Real Time: 0.050, User Time 0.000, System Time 0.000
+
+
+h = 0.000001 
+n = 100
+Real Time: 0.060, User Time 0.000, System Time 0.000
+
+
+h = 0.000001 
+n = 1000
+Real Time: 0.600, User Time 0.000, System Time 0.060
+
+
+h = 0.000001
+n = 10000
+Real Time: 6.200, User Time 0.030, System Time 0.670

@@ -1,23 +1,23 @@
-CFLAGS=-Wall -Wpedantic -Wextra
+CFLAGS=-Wall -Wpedantic -Wextra -std=c18 -g
 
-all: bin/main_lib bin/main_sys
+all: bin/main
 
-test: bin/main_lib bin/main_sys data/benchmark_input valgrind_verify benchmark
-	
+test: bin/main valgrind_verify benchmark
 
-valgrind_verify: ./bin/main_lib ./bin/main_sys data/input
-	valgrind ./bin/main_lib data/input data/output 
-	valgrind ./bin/main_sys data/input data/output 
+valgrind_verify: bin/main
+	valgrind ./bin/main 0.001 10
 
-benchmark: bin/main_lib bin/main_sys data/benchmark_input
-	./bin/main_lib data/benchmark_input data/benchmark_output 
-	./bin/main_sys data/benchmark_input data/benchmark_output 
+benchmark: bin/main
+	./bin/main 0.001 100
+	./bin/main 0.000001 100
+	./bin/main 0.000001 1000
+	./bin/main 0.000001 10000
 
-bin/main_lib: main_lib.c
-	gcc $(CFLAGS) main_lib.c -o bin/main_lib
+bin/main: main.c bin/child
+	gcc $(CFLAGS) main.c -o bin/main
 
-bin/main_sys: main_sys.c
-	gcc $(CFLAGS) main_sys.c -o bin/main_sys
+bin/child: child.c
+	gcc $(CFLAGS) child.c -o bin/child
 
 clean:
 	rm *.o
