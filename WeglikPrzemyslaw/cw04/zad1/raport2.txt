@@ -1,0 +1,21 @@
+EXEC:
+./bin/main ignore exec
+Ignored in child 
+./bin/main pending exec
+Signal pending in parent: 0
+Signal pending in child: 1
+./bin/main mask exec
+Masked in children
+./bin/main handler exec
+Correctly handled! Sig: 10
+
+FORK:
+./bin/main ignore fork
+Ignored in child 
+./bin/main pending fork
+Signal pending in parent: 0
+Signal pending in child: 0
+./bin/main mask fork
+Masked in children
+./bin/main handler fork
+Correctly handled! Sig: 10

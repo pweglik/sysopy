@@ -15,29 +15,29 @@ void create_subprocesses(int count_of_child_processes, int rectangles_per_proces
 
         if(child_pid == 0) {
             char ** child_agrv = calloc(sizeof(char *), 5);
-        char temp_buff[100];
-        //name of program
-        child_agrv[0] = calloc(sizeof(char), 6);
-        strcpy(child_agrv[0], "child");
-        //id
-        child_agrv[1] = calloc(sizeof(char), 10);
-        snprintf(temp_buff, 100, "%d", id);
-        strcpy(child_agrv[1], temp_buff);
-        // width of rectangle
-        child_agrv[2] = calloc(sizeof(char), 20);
-        snprintf(temp_buff, 100, "%f", width_of_rectangle);
-        strcpy(child_agrv[2], temp_buff);
-        // number of rectangles handles by a process
-        // leftover rectangles are added up to 1st process
-        child_agrv[3] = calloc(sizeof(char), 10);
-        if(id == 0) snprintf(temp_buff, 100, "%d", rectangles_per_process + leftover);
-        else snprintf(temp_buff, 100, "%d", rectangles_per_process);
-        strcpy(child_agrv[3], temp_buff);
-        // starting point
-        child_agrv[4] = calloc(sizeof(char), 20);
-        if(id == 0) snprintf(temp_buff, 100, "%f", 0.0f);
-        else snprintf(temp_buff, 100, "%f", (rectangles_per_process * id + leftover) * width_of_rectangle);
-        strcpy(child_agrv[4], temp_buff);
+            char temp_buff[100];
+            //name of program
+            child_agrv[0] = calloc(sizeof(char), 6);
+            strcpy(child_agrv[0], "child");
+            //id
+            child_agrv[1] = calloc(sizeof(char), 10);
+            snprintf(temp_buff, 100, "%d", id);
+            strcpy(child_agrv[1], temp_buff);
+            // width of rectangle
+            child_agrv[2] = calloc(sizeof(char), 20);
+            snprintf(temp_buff, 100, "%f", width_of_rectangle);
+            strcpy(child_agrv[2], temp_buff);
+            // number of rectangles handles by a process
+            // leftover rectangles are added up to 1st process
+            child_agrv[3] = calloc(sizeof(char), 10);
+            if(id == 0) snprintf(temp_buff, 100, "%d", rectangles_per_process + leftover);
+            else snprintf(temp_buff, 100, "%d", rectangles_per_process);
+            strcpy(child_agrv[3], temp_buff);
+            // starting point
+            child_agrv[4] = calloc(sizeof(char), 20);
+            if(id == 0) snprintf(temp_buff, 100, "%f", 0.0f);
+            else snprintf(temp_buff, 100, "%f", (rectangles_per_process * id + leftover) * width_of_rectangle);
+            strcpy(child_agrv[4], temp_buff);
 
             if(execl("./bin/child", child_agrv[0], child_agrv[1], child_agrv[2], child_agrv[3], child_agrv[4], NULL) == -1)
             {

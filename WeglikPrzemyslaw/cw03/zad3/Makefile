@@ -11,6 +11,7 @@ valgrind_verify: bin/main
 
 benchmark: bin/main
 	./bin/main test0 aaa 5
+	./bin/main test0 aaa 2
 	./bin/main test0 bbb 1
 	./bin/main test0 bbb 5
 
