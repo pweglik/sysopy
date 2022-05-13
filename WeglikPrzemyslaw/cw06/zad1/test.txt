@@ -1,0 +1,8 @@
+term1 = cat /etc/passwd | wc -l
+term2 = ls -la /home/przemek 
+term3 = cat /home/przemek/.bash_history | head -n 20 | grep make
+term4 = wc -l
+EXECUTE
+term1
+term2|term4
+term3|term4
